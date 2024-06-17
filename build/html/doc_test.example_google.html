@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+
+<html lang="ko" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>doc_test.example_google module &#8212; doc_test 1.0.0 문서</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=12dfc556" />
+    <script src="_static/documentation_options.js?v=5a0dd2f0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/translations.js?v=b5f768d8"></script>
+    <link rel="index" title="색인" href="genindex.html" />
+    <link rel="search" title="검색" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="module-doc_test.example_google">
+<span id="doc-test-example-google-module"></span><h1>doc_test.example_google module<a class="headerlink" href="#module-doc_test.example_google" title="Link to this heading">¶</a></h1>
+<p>Example Google style docstrings.  # module summary</p>
+<p># module description
+This module demonstrates documentation as specified by the <a class="reference external" href="http://google.github.io/styleguide/pyguide.html">Google Python
+Style Guide</a>. Docstrings may extend over multiple lines. Sections are created
+with a section header and a colon followed by a block of indented text.</p>
+<p># section name:
+# section description
+# Example에는 함수, method, 모듈 등의 사용 예시를 작성
+.. rubric:: 예제</p>
+<p>Examples can be given using either the <code class="docutils literal notranslate"><span class="pre">Example</span></code> or <code class="docutils literal notranslate"><span class="pre">Examples</span></code>
+sections. Sections support any reStructuredText formatting, including
+literal blocks::
+# :: &lt;- html에서 코드 블록 생성을 위해 사용</p>
+<blockquote>
+<div><p>$ python example_google.py</p>
+</div></blockquote>
+<p># section은 unindented text가 시작되거나 새 section이 시작되면 break
+Section breaks are created by resuming unindented text. Section breaks
+are also implicitly created anytime a new section starts.</p>
+<p># Attributes에는 모듈이나 class 등이 가지고 있는 속성을 작성
+.. attribute:: # 변수</p>
+<blockquote>
+<div><p>설명, attribute 대신 inline docstring에 설명해도 되나</p>
+<dl class="field-list simple">
+<dt class="field-odd">type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>자료형</p>
+</dd>
+</dl>
+</div></blockquote>
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">#</span> <span class="pre">중요한</span> <span class="pre">것은</span> <span class="pre">모듈</span> <span class="pre">내에서</span> <span class="pre">한</span> <span class="pre">방식만</span> <span class="pre">일관되게</span> <span class="pre">사용하기</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="doc_test.example_google.module_level_variable1">
+<span class="sig-prename descclassname"><span class="pre">doc_test.example_google.</span></span><span class="sig-name descname"><span class="pre">module_level_variable1</span></span><a class="headerlink" href="#doc_test.example_google.module_level_variable1" title="Link to this definition">¶</a></dt>
+<dd><p>Module level variables may be documented in
+either the <code class="docutils literal notranslate"><span class="pre">Attributes</span></code> section of the module docstring, or in an
+inline docstring immediately following the variable.</p>
+<p>Either form is acceptable, but the two should not be mixed. Choose
+one convention to document module level variables and be consistent
+with it.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p># Todo는 앞으로 해야 할 일 작성
+.. todo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* For module TODOs
+* You have to also use ``sphinx.ext.todo`` extension
+</pre></div>
+</div>
+<dl class="py class">
+<dt class="sig sig-object py" id="doc_test.example_google.ExampleClass">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">doc_test.example_google.</span></span><span class="sig-name descname"><span class="pre">ExampleClass</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">param1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">param2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">param3</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/doc_test/example_google.html#ExampleClass"><span class="viewcode-link"><span class="pre">[소스]</span></span></a><a class="headerlink" href="#doc_test.example_google.ExampleClass" title="Link to this definition">¶</a></dt>
+<dd><p>기반 클래스: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The summary line for a class docstring should fit on one line.</p>
+<p># class가 public 속성을 가지고 있는 경우 “Attributes” 섹션에 정리하고
+# 함수의 “Args” 섹션과 동일한 방식으로 정리
+# 아니면 attribute 선언문에서 inline 방식으로 docstring 작성
+If the class has public attributes, they may be documented here
+in an <code class="docutils literal notranslate"><span class="pre">Attributes</span></code> section and follow the same formatting as a
+function’s <code class="docutils literal notranslate"><span class="pre">Args</span></code> section. Alternatively, attributes may be documented
+inline with the attribute’s declaration (see __init__ method below).</p>
+<p>#”&#64;property” decorator로 생성된 property의 경우 getter method에 기술
+Properties created with the <code class="docutils literal notranslate"><span class="pre">&#64;property</span></code> decorator should be documented
+in the property’s getter method.</p>
+<p># html에서는 안 보이는데 어디서 확인하는지 체크 필요
+.. attribute:: attr1</p>
+<blockquote>
+<div><p>Description of <cite>attr1</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</div></blockquote>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="doc_test.example_google.ExampleClass.attr2">
+<span class="sig-name descname"><span class="pre">attr2</span></span><a class="headerlink" href="#doc_test.example_google.ExampleClass.attr2" title="Link to this definition">¶</a></dt>
+<dd><p>Description of <cite>attr2</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code>, optional</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="doc_test.example_google.ExampleClass.attr3">
+<span class="sig-name descname"><span class="pre">attr3</span></span><a class="headerlink" href="#doc_test.example_google.ExampleClass.attr3" title="Link to this definition">¶</a></dt>
+<dd><p>Doc comment <em>inline</em> with attribute</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="doc_test.example_google.ExampleClass.attr4">
+<span class="sig-name descname"><span class="pre">attr4</span></span><a class="headerlink" href="#doc_test.example_google.ExampleClass.attr4" title="Link to this definition">¶</a></dt>
+<dd><p>Doc comment <em>before</em> attribute, with type specified</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list of str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="doc_test.example_google.ExampleClass.attr5">
+<span class="sig-name descname"><span class="pre">attr5</span></span><a class="headerlink" href="#doc_test.example_google.ExampleClass.attr5" title="Link to this definition">¶</a></dt>
+<dd><p>Docstring <em>after</em> attribute, with type specified.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="doc_test.example_google.ExampleClass.example_method">
+<span class="sig-name descname"><span class="pre">example_method</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">param1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">param2</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/doc_test/example_google.html#ExampleClass.example_method"><span class="viewcode-link"><span class="pre">[소스]</span></span></a><a class="headerlink" href="#doc_test.example_google.ExampleClass.example_method" title="Link to this definition">¶</a></dt>
+<dd><p>Class methods are similar to regular functions.</p>
+<div class="admonition note">
+<p class="admonition-title">참고</p>
+<p>Do not include the <cite>self</cite> parameter in the <code class="docutils literal notranslate"><span class="pre">Args</span></code> section.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>param1</strong> – The first parameter.</p></li>
+<li><p><strong>param2</strong> – The second parameter.</p></li>
+</ul>
+</dd>
+<dt class="field-even">반환<span class="colon">:</span></dt>
+<dd class="field-even"><p>True if successful, False otherwise.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="doc_test.example_google.ExampleClass.readonly_property">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">readonly_property</span></span><a class="headerlink" href="#doc_test.example_google.ExampleClass.readonly_property" title="Link to this definition">¶</a></dt>
+<dd><p>Properties should be documented in their getter method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="doc_test.example_google.ExampleClass.readwrite_property">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">readwrite_property</span></span><a class="headerlink" href="#doc_test.example_google.ExampleClass.readwrite_property" title="Link to this definition">¶</a></dt>
+<dd><p>Properties with both a getter and setter
+should only be documented in their getter method.</p>
+<p>If the setter method contains notable behavior, it should be
+mentioned here.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code> of <code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="doc_test.example_google.ExampleError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">doc_test.example_google.</span></span><span class="sig-name descname"><span class="pre">ExampleError</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">code</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/doc_test/example_google.html#ExampleError"><span class="viewcode-link"><span class="pre">[소스]</span></span></a><a class="headerlink" href="#doc_test.example_google.ExampleError" title="Link to this definition">¶</a></dt>
+<dd><p>기반 클래스: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<p>Exceptions are documented in the same way as classes.</p>
+<p># __init__ method는 class docstring이나 __init__ method docstring에서 기술
+# 어느 방법을 택하던지 module 수준에서는 한 방식으로 통일하기
+The __init__ method may be documented in either the class level
+docstring, or as a docstring on the __init__ method itself.</p>
+<p>Either form is acceptable, but the two should not be mixed. Choose one
+convention to document the __init__ method and be consistent with it.</p>
+<p># Note에는 주의 사항 작성
+.. note:: Do not include the <cite>self</cite> parameter in the <code class="docutils literal notranslate"><span class="pre">Args</span></code> section.</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>msg</strong> (<em>str</em>) – Human readable string describing the exception.</p></li>
+<li><p><strong>code</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code>, optional) – Error code.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="doc_test.example_google.ExampleError.msg">
+<span class="sig-name descname"><span class="pre">msg</span></span><a class="headerlink" href="#doc_test.example_google.ExampleError.msg" title="Link to this definition">¶</a></dt>
+<dd><p>Human readable string describing the exception.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="doc_test.example_google.ExampleError.code">
+<span class="sig-name descname"><span class="pre">code</span></span><a class="headerlink" href="#doc_test.example_google.ExampleError.code" title="Link to this definition">¶</a></dt>
+<dd><p>Exception error code.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="doc_test.example_google.example_generator">
+<span class="sig-prename descclassname"><span class="pre">doc_test.example_google.</span></span><span class="sig-name descname"><span class="pre">example_generator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/doc_test/example_google.html#example_generator"><span class="viewcode-link"><span class="pre">[소스]</span></span></a><a class="headerlink" href="#doc_test.example_google.example_generator" title="Link to this definition">¶</a></dt>
+<dd><p>Generators have a <code class="docutils literal notranslate"><span class="pre">Yields</span></code> section instead of a <code class="docutils literal notranslate"><span class="pre">Returns</span></code> section.</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>n</strong> (<em>int</em>) – The upper limit of the range to generate, from 0 to <cite>n</cite> - 1.</p>
+</dd>
+<dt class="field-even">생성<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>int</em> – The next number in the range of 0 to <cite>n</cite> - 1.</p>
+</dd>
+</dl>
+<p class="rubric">예제</p>
+<p># example은 doctest를 실행할 수 있는 형태로 작성되어야 하며 어떻게 사용하는지
+# 예시를 보여주어야 한다.
+Examples should be written in doctest format, and should illustrate how
+to use the function.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">([</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">example_generator</span><span class="p">(</span><span class="mi">4</span><span class="p">)])</span>
+<span class="go">[0, 1, 2, 3]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="doc_test.example_google.function_with_pep484_type_annotations">
+<span class="sig-prename descclassname"><span class="pre">doc_test.example_google.</span></span><span class="sig-name descname"><span class="pre">function_with_pep484_type_annotations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">param1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">param2</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/doc_test/example_google.html#function_with_pep484_type_annotations"><span class="viewcode-link"><span class="pre">[소스]</span></span></a><a class="headerlink" href="#doc_test.example_google.function_with_pep484_type_annotations" title="Link to this definition">¶</a></dt>
+<dd><p>Example function with PEP 484 type annotations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>param1</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></span>) – The first parameter.</p></li>
+<li><p><strong>param2</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span>) – The second parameter.</p></li>
+</ul>
+</dd>
+<dt class="field-even">반환 형식<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></span></p>
+</dd>
+<dt class="field-odd">반환<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The return value. True for success, False otherwise.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="doc_test.example_google.function_with_types_in_docstring">
+<span class="sig-prename descclassname"><span class="pre">doc_test.example_google.</span></span><span class="sig-name descname"><span class="pre">function_with_types_in_docstring</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">param1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">param2</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/doc_test/example_google.html#function_with_types_in_docstring"><span class="viewcode-link"><span class="pre">[소스]</span></span></a><a class="headerlink" href="#doc_test.example_google.function_with_types_in_docstring" title="Link to this definition">¶</a></dt>
+<dd><p>Example function with types documented in the docstring.</p>
+<p># “<a href="#id3"><span class="problematic" id="id4">`이름`_</span></a>”: 하이퍼링크, 뒤에서 “.. _이름:”으로 하이퍼링크 정의
+<a href="#id5"><span class="problematic" id="id6">`PEP 484`_</span></a> type annotations are supported. If attribute, parameter, and
+return types are annotated according to <a href="#id7"><span class="problematic" id="id8">`PEP 484`_</span></a>, they do not need to be
+included in the docstring:</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>parameter</strong> (<em>#</em>) – 설명.</p></li>
+<li><p><strong>param1</strong> (<em>int</em>) – The first parameter.</p></li>
+<li><p><strong>param2</strong> (<em>str</em>) – The second parameter.</p></li>
+</ul>
+</dd>
+<dt class="field-even">반환<span class="colon">:</span></dt>
+<dd class="field-even"><p>설명
+bool: The return value. True for success, False otherwise.</p>
+</dd>
+<dt class="field-odd">반환 형식<span class="colon">:</span></dt>
+<dd class="field-odd"><p># 변수형</p>
+</dd>
+</dl>
+<p># 위 <a href="#id1"><span class="problematic" id="id2">`</span></a>PEP 484`_를 받아 하이퍼링크 추가
+.. _PEP 484:</p>
+<blockquote>
+<div><p><a class="reference external" href="https://www.python.org/dev/peps/pep-0484/">https://www.python.org/dev/peps/pep-0484/</a></p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="doc_test.example_google.module_level_function">
+<span class="sig-prename descclassname"><span class="pre">doc_test.example_google.</span></span><span class="sig-name descname"><span class="pre">module_level_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">param1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">param2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/doc_test/example_google.html#module_level_function"><span class="viewcode-link"><span class="pre">[소스]</span></span></a><a class="headerlink" href="#doc_test.example_google.module_level_function" title="Link to this definition">¶</a></dt>
+<dd><p>This is an example of a module level function.</p>
+<p># description
+# parameter 이름은 필수 항목이며 자료형 및 description은 선택 사항
+# <code class="docutils literal notranslate"><span class="pre">단어</span></code>: html에서 keyword 강조 표시?
+Function parameters should be documented in the <code class="docutils literal notranslate"><span class="pre">Args</span></code> section. The name
+of each parameter is required. The type and description of each parameter
+is optional, but should be included if not obvious.</p>
+<p># 만약 *args, **kwargs가 사용되는 경우 반드시 목록에 포함
+If *args or **kwargs are accepted,
+they should be listed as <code class="docutils literal notranslate"><span class="pre">*args</span></code> and <code class="docutils literal notranslate"><span class="pre">**kwargs</span></code>.</p>
+<p>The format for a parameter is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># 이름 (자료형, optional): 설명, line은 모두 동일하게 indentation되어야 함</span>
+<span class="n">name</span> <span class="p">(</span><span class="nb">type</span><span class="p">):</span> <span class="n">description</span>
+    <span class="n">The</span> <span class="n">description</span> <span class="n">may</span> <span class="n">span</span> <span class="n">multiple</span> <span class="n">lines</span><span class="o">.</span> <span class="n">Following</span>
+    <span class="n">lines</span> <span class="n">should</span> <span class="n">be</span> <span class="n">indented</span><span class="o">.</span> <span class="n">The</span> <span class="s2">&quot;(type)&quot;</span> <span class="ow">is</span> <span class="n">optional</span><span class="o">.</span>
+
+    <span class="n">Multiple</span> <span class="n">paragraphs</span> <span class="n">are</span> <span class="n">supported</span> <span class="ow">in</span> <span class="n">parameter</span>
+    <span class="n">descriptions</span><span class="o">.</span>
+</pre></div>
+</div>
+<p># Args는 html에서 Parameters로 자동 변경
+:type param1: 
+:param param1: The first parameter.
+:type param1: int
+:param #: obj: &lt;- python 내부 keyword 표시?, <cite>단어</cite>: consolas로 강조
+:param # 두 번째 줄부터는 추가 indentation 필요:
+:type param2: 
+:param param2: The second parameter. Defaults to None.</p>
+<blockquote>
+<div><p>Second line of description should be indented.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>*args</strong> – Variable length argument list.</p></li>
+<li><p><strong>**kwargs</strong> – Arbitrary keyword arguments.</p></li>
+</ul>
+</dd>
+<dt class="field-even">반환<span class="colon">:</span></dt>
+<dd class="field-even"><p><p>True if successful, False otherwise.</p>
+<p># 자료형은 선택사항이며 Returns 바로 아래에서 “:”으로 구분됨
+The return type is optional and may be specified at the beginning of
+the <code class="docutils literal notranslate"><span class="pre">Returns</span></code> section followed by a colon.</p>
+<p># 여러 줄인 경우 첫 번째 줄과 동일하게 indentation
+The <code class="docutils literal notranslate"><span class="pre">Returns</span></code> section may span multiple lines and paragraphs.
+Following lines should be indented to match the first line.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">Returns</span></code> section supports any reStructuredText formatting,
+including literal blocks:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s1">&#39;param1&#39;</span><span class="p">:</span> <span class="n">param1</span><span class="p">,</span>
+    <span class="s1">&#39;param2&#39;</span><span class="p">:</span> <span class="n">param2</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</p>
+</dd>
+<dt class="field-odd">반환 형식<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+<p># Raises에서는 인터페이스와 연관있는 모든 예외 기술
+:raises AttributeError: The <code class="docutils literal notranslate"><span class="pre">Raises</span></code> section is a list of all exceptions
+    that are relevant to the interface.
+:raises ValueError: If <cite>param2</cite> is equal to <cite>param1</cite>.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="doc_test.example_google.module_level_variable2">
+<span class="sig-prename descclassname"><span class="pre">doc_test.example_google.</span></span><span class="sig-name descname"><span class="pre">module_level_variable2</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">98765</span></em><a class="headerlink" href="#doc_test.example_google.module_level_variable2" title="Link to this definition">¶</a></dt>
+<dd><p>Module level variable documented inline.</p>
+<p>The docstring may span multiple lines. The type may optionally be specified
+on the first line, separated by a colon.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">doc_test</a></h1>
+
+
+
+
+
+
+
+
+<h3>탐색</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">빠른 검색</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="이동" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, sykang1.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.3.7</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="_sources/doc_test.example_google.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
