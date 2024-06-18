@@ -63,6 +63,6 @@ jobs:
           # Upload entire repository
           path: docs/_build/html/
       # 앞서 말한 Git Pages에서 git action 방식으로 HTML을 deploy하기 위한 workflow입니다
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v2
+#      - name: Deploy to GitHub Pages
+#        id: deployment
+#        uses: actions/deploy-pages@v2
