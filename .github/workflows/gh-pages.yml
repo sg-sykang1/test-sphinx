@@ -49,11 +49,11 @@ jobs:
         run: |
             # echo "https://${{ secrets.GITACTIONAUTHORIZATION }}:@github.com" > $HOME/.git-credentials
             # git config --global credential.helper store
-            # pip${{ matrix.python-version }} install -e .  # 패키지 설치
+            pip${{ matrix.python-version }} install -e .  # 패키지 설치
             # cd source
-            pip${{ matrix.python-version }} install -r source/requirements.txt  # 문서화를 위한 dependency 설치
+            pip${{ matrix.python-version }} install -r requirements.txt  # 문서화를 위한 dependency 설치
             make html
-            touch build/html/.nojekyll
+            touch _build/html/.nojekyll
         # env는 외부 변수를 환경 변수로 사용하고자 할 때 사용합니다
 #        env:
 #          TOKEN: ${{ secrets.GITACTIONAUTHORIZATION }}
