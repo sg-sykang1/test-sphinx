@@ -50,7 +50,7 @@ jobs:
             # echo "https://${{ secrets.GITACTIONAUTHORIZATION }}:@github.com" > $HOME/.git-credentials
             # git config --global credential.helper store
             # pip${{ matrix.python-version }} install -e .  # 패키지 설치
-            cd docs
+            cd doc_test
             pip${{ matrix.python-version }} install -r requirements.txt  # 문서화를 위한 dependency 설치
             make html
             touch _build/html/.nojekyll
@@ -61,7 +61,7 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           # Upload entire repository
-          path: docs/_build/html/
+          path: doc_test/_build/html/
       # 앞서 말한 Git Pages에서 git action 방식으로 HTML을 deploy하기 위한 workflow입니다
       - name: Deploy to GitHub Pages
         id: deployment
