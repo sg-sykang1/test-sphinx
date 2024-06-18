@@ -55,8 +55,8 @@ jobs:
             make html
             touch _build/html/.nojekyll
         # env는 외부 변수를 환경 변수로 사용하고자 할 때 사용합니다
-#        env:
-#          TOKEN: ${{ secrets.GITACTIONAUTHORIZATION }}
+        env:
+          TOKEN: ${{ secrets.TEST_TOKEN }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
