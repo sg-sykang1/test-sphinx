@@ -1,0 +1,68 @@
+# Simple workflow for deploying static content to GitHub Pages
+name: Deploy static content to Pages
+
+on:
+  # Runs on pushes targeting the default branch
+  push:
+    branches: ["master"]
+
+  # Allows you to run this workflow manually from the Actions tab
+  # 아래 section이 존재하는 경우 git action에서 수동으로 workflow를 구동할 수 있습니다
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+# 단기간에 여러번 변경이 되는 경우 현재 진행 중인 workflow와 마지막 workflow를 제외한 나머지 작업을 진행하지 않도록 제어하기 위한 구문입니다.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  # Single deploy job since we're just deploying
+  deploy:
+    environment:
+      name: github-pages
+      # git에서 자동으로 생성한 URL에 deploy 하기 위한 환경 변수입니다.
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        # 작업을 진행할 python version
+        python-version: [ "3.12" ]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
+        # with는 workflow에 전달할 argument 개념입니다.
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Build HTML
+      # package 설치 후 HTML 생성 예시입니다
+      # private package dependency가 있어 인증을 위해 git token을 사용하였는데 무시하셔도 됩니다.
+        run:
+            # echo "https://${{ secrets.GITACTIONAUTHORIZATION }}:@github.com" > $HOME/.git-credentials
+            # git config --global credential.helper store
+            pip${{ matrix.python-version }} install -e .  # 패키지 설치
+            cd docs
+            pip${{ matrix.python-version }} install -r requirements.txt  # 문서화를 위한 dependency 설치
+            make html
+            touch _build/html/.nojekyll
+        # env는 외부 변수를 환경 변수로 사용하고자 할 때 사용합니다
+#        env:
+#          TOKEN: ${{ secrets.GITACTIONAUTHORIZATION }}
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          # Upload entire repository
+          path: docs/_build/html/
+      # 앞서 말한 Git Pages에서 git action 방식으로 HTML을 deploy하기 위한 workflow입니다
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
