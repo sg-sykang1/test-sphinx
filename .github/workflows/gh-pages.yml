@@ -49,7 +49,7 @@ jobs:
         run: |
             # echo "https://${{ secrets.GITACTIONAUTHORIZATION }}:@github.com" > $HOME/.git-credentials
             # git config --global credential.helper store
-            pip${{ matrix.python-version }} install -e .  # 패키지 설치
+            # pip${{ matrix.python-version }} install -e .  # 패키지 설치
             # cd source
             pip${{ matrix.python-version }} install -r requirements.txt  # 문서화를 위한 dependency 설치
             make html
