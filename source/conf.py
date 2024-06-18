@@ -4,7 +4,8 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
 import os
 import sys
-sys.path.insert(0, os.path.abspath("C:\\Users\\sykang1\\PycharmProjects\\SphinxProject"))
+# sys.path.insert(0, os.path.abspath("C:\\Users\\sykang1\\PycharmProjects\\SphinxProject"))
+sys.path.insert(0, os.path.abspath(".."))
 from doc_test import __version__ as VERSION
 
 
