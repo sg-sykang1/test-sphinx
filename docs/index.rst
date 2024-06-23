@@ -5,16 +5,16 @@
 
 Welcome to doc_test's documentation!
 ====================================
-.. toctree::  # html 왼쪽의 table of contents tree
-   :hidden:  # tree에는 아래 항목을 추가하나 본 page에서는 숨김
+.. toctree::
+   :hidden:
 
-   Home <self>  # Name <실제 참조 경로>
+   Home <self>
 
 .. toctree::
-   :maxdepth: 2  # 최대로 출력할 depth
-   :caption: Contents:  # 소제목
+   :maxdepth: 2
+   :caption: Contents:
 
-   modules  # module.rst를 참고하여 내용물 출력
+   modules
 
 
 Indices and tables
