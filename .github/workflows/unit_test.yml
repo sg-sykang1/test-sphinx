@@ -17,7 +17,7 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
-          cache: "pip"  # 매번 requirement 재설치하지 않기 위해 cache 적용
+#          cache: "pip"  # 매번 requirement 재설치하지 않기 위해 cache 적용
 
 #      - name: Install dependencies  # dependency 및 package 설치가 필요한 경우 진행
 #        run: pip3 install -e .
