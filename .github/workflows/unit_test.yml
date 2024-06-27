@@ -24,4 +24,4 @@ jobs:
 
       - name: Test with unittest
         run: |
-          python3 -m unittest discover -s test -t .  # test 폴더 안에 있는 test script 구동
+          python3 -m unittest discover -s test
