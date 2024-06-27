@@ -1,0 +1,27 @@
+# This is a basic workflow to help you get started with Actions
+
+name: unit_test
+
+on: [push]  # job trigger
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.10"]  # 테스트하고자 하는 python 버전 지정
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v3
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: "pip"  # 매번 requirement 재설치하지 않기 위해 cache 적용
+
+      - name: Install dependencies  # dependency 및 package 설치가 필요한 경우 진행
+        run: pip3 install -e .
+
+      - name: Test with unittest
+        run: |
+          python3 -m unittest discover -s test -t .  # test 폴더 안에 있는 test script 구동
