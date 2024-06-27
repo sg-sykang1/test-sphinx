@@ -12,9 +12,9 @@ jobs:
         python-version: ["3.10"]  # 테스트하고자 하는 python 버전 지정
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@4
       - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v3
+        uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
           cache: "pip"  # 매번 requirement 재설치하지 않기 위해 cache 적용
